@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/cars', 'App\Http\Controllers\CarController');
+Route::apiResource('/cars', 'App\Http\Controllers\CarController')->only(['index', 'update', 'destroy']);
